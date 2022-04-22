@@ -26,3 +26,12 @@ python3 main.py
 - Right now it is hard-coded to take a picture every 10 seconds, but that could be made variable very easily.
 
 
+
+
+# Convert images to video
+
+Use ffmpeg command line
+```
+sudo apt install ffmpeg -y
+ffmpeg -framerate 30 -pattern_type glob -i 'Patio*.jpg' -c:v libx264 -pix_fmt yuv420p out.mp4
+```
